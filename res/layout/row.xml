@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listElement"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/row_body"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:bufferType="spannable"
+            android:duplicateParentState="true"
+            android:includeFontPadding="true"
+            android:padding="10.0dip"
+            android:text="Confession"
+            android:textColor="@color/holo_white"
+            android:textSize="@dimen/large_text_size" />
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@id/row_body"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/details1"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_margin="6dp"
+                android:layout_weight=".9"
+                android:background="@color/dark_grey"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/details_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/row_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:paddingRight="4dp"
+                        android:text="Link"
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/row_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:text="Date"
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/dash1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:text="  -  "
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/row_hugs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:text="Hugs"
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/dash2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:text="  -  "
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/row_shrugs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:paddingRight="4dp"
+                        android:text="Shrugs"
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/details_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/row_comment_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="true"
+                        android:text="Comments"
+                        android:textColor="@color/holo_white"
+                        android:textSize="@dimen/medium_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/expandable_toggle_button"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".1"
+                android:text="." />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hug"
+            android:textColor="@color/icsblue" />
+
+        <Button
+            android:id="@+id/details2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shrug"
+            android:textColor="@color/orangered" />
+    </LinearLayout>
+
+</LinearLayout>
